@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: /Php63/login.php');
+  header('Location: /php63/login.php');
 ?>
