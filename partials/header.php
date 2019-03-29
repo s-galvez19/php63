@@ -1,3 +1,3 @@
 <header>
-  <a href="/gallery.php">Your App Name</a>
+  <a href="/gallery.php">Album Of Stamps</a>
 </header>
