@@ -1,8 +1,15 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "3006622703";
-$dbname = "stamps";
+$server = 'localhost:3306';
+$username = 'root';
+$password = '3006622703';
+$database = 'stamps';
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+try {
+  $conn = new PDO("mysql:host=$server;dbname=$stamps;", $username, $password);
+} catch (PDOException $e) {
+  die('Connection Failed: ' . $e->getMessage());
+}
+
+?>
+

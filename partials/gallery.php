@@ -33,13 +33,20 @@
             <?php
             include_once 'includes/dbh.inc.php';
 
-            $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";
-            $stmt = mysqli_stmt_init($conn);
-            if (!mysqli_stmt_prepare($stmt, $sql)) {
-              echo "SQL statement failed!";
-            } else {
-              mysqli_stmt_execute($stmt);
-              $result = mysqli_stmt_get_result($stmt);
+             if (isset($_SESSION['user_id'])) {
+    $records = $conn->prepare('SELECT * FROM gallery ORDER BY orderGallery DESC');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+
+            // $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";
+            // $stmt = mysqli_stmt_init($conn);
+            // if (!mysqli_stmt_prepare($stmt, $sql)) {
+            //   echo "SQL statement failed!";
+            // } else {
+            //   mysqli_stmt_execute($stmt);
+            //   $result = mysqli_stmt_get_result($stmt);
 
               while ($row = mysqli_fetch_assoc($result)) {
                 echo '<a href="#">
