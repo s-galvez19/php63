@@ -6,7 +6,7 @@ $password = '3006622703';
 $database = 'stamps';
 
 try {
-  $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+  $conn = new PDO("mysql:host=$server;dbname=$stamps;", $username, $password);
 } catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }
