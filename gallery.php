@@ -6,20 +6,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My Portfolio</title>
+    <title>Album</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <a href="index.html" class="header-brand">Stamps</a>
-  
-    </header>
+    
     <main>
 
       <section class="gallery-links">
         <div class="wrapper">
-          <h2>Album</h2>
+          <h2>Album Of Stamps</h2>
 
           <div class="gallery-container">
             <?php
@@ -61,5 +58,8 @@
 
         </div>
       </section>
+
+    </main>
+   
   </body>
 </html>

@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
         $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
         $fileDestination = "../img/gallery/" . $imageFullName;
 
-        include_once "database.php";
+        include_once "dbh.inc.php";
 
         if (empty($imageTitle) || empty($imageDesc)) {
           header("Location: ../gallery.php?upload=empty");
